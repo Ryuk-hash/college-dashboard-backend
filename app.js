@@ -6,6 +6,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 
 const AppError = require('./utils/appError');
 const GlobalErrorHandler = require('./handlers/errorHandler');
@@ -26,6 +27,9 @@ const app = express();
 
 // app.options('*', cors());
 // // app.options('/api/v1/tours/:id', cors());
+
+// Serving static files
+app.use(express.static(`${__dirname}/public`));
 
 // Set security HTTP headers
 app.use(helmet());
@@ -72,8 +76,7 @@ app.use(
   })
 );
 
-// Serving static files
-app.use(express.static(`${__dirname}/public`));
+app.use(compression());
 
 // 2) --- ROUTES ---
 
