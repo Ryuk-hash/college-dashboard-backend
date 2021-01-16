@@ -18,15 +18,8 @@ const app = express();
 
 // 1) --- GLOBAL MIDDLEWARES ---
 // Implement CORS
-// app.use(cors());
-// // Access-Control-Allow-Origin *
-// // api.natours.com, front-end natours.com
-// // app.use(cors({
-// //   origin: 'https://www.natours.com'
-// // }))
-
-// app.options('*', cors());
-// // app.options('/api/v1/tours/:id', cors());
+app.use(cors());
+app.options('*', cors());
 
 // Serving static files
 app.use(express.static(`${__dirname}/public`));
