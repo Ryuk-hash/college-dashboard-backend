@@ -1,0 +1,29 @@
+{
+  "name": "college-dashboard-backend",
+  "version": "1.0.0",
+  "description": "A backend designed to serve REST-APIs for a college-dashboard.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "start:prod": "SET NODE_ENV=production&nodemon server.js"
+  },
+  "author": "Mandeep Singh",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.0.2",
+    "express-rate-limit": "^5.2.3",
+    "faker": "^5.1.0",
+    "helmet": "^4.3.1",
+    "hpp": "^0.2.3",
+    "mongoose": "^5.11.12",
+    "morgan": "^1.10.0",
+    "xss-clean": "^0.1.1"
+  }
+}
